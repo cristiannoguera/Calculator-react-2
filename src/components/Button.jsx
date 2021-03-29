@@ -4,7 +4,7 @@ import './Button.css';
 const isOperator = val => {
     return !isNaN(val) || val === "." || val === "=";
 }
-const Button = props =>(
+export const Button = props =>(
     <div
         className={`button-wrapper ${
         isOperator(props.children) ? null :"operator"
@@ -13,5 +13,3 @@ const Button = props =>(
         {props.children}
     </div>
 );
-
-export default Button;
